@@ -4,11 +4,11 @@ import TabNavigation from '@/components/TabNavigation';
 import ContentCard from '@/components/ContentCard';
 
 // Mock data
-const mockVideos = [
+  const mockVideos = [
   {
     id: '1',
     type: 'video' as const,
-    thumbnail: '/images/content-placeholder.jpg',
+    thumbnail: '/images/content-placeholder-orange.jpg',
     title: 'Meu primeiro vídeo no PrivHub',
     description: 'Confira este conteúdo incrível que preparei especialmente para vocês',
     likes: 1234,
@@ -18,7 +18,7 @@ const mockVideos = [
   {
     id: '2',
     type: 'video' as const,
-    thumbnail: '/images/hero-gradient.jpg',
+    thumbnail: '/images/hero-gradient-orange.jpg',
     title: 'Dicas de produção de conteúdo',
     description: 'Aprenda as melhores práticas para criar vídeos de qualidade',
     likes: 5678,
@@ -28,7 +28,7 @@ const mockVideos = [
   {
     id: '3',
     type: 'video' as const,
-    thumbnail: '/images/profile-banner.jpg',
+    thumbnail: '/images/profile-banner-orange.jpg',
     title: 'Dia na minha vida',
     description: 'Acompanhe meu dia a dia e rotina de criador de conteúdo',
     likes: 3456,
@@ -41,7 +41,7 @@ const mockImages = [
   {
     id: '1',
     type: 'image' as const,
-    thumbnail: '/images/hero-gradient.jpg',
+    thumbnail: '/images/hero-gradient-orange.jpg',
     title: 'Foto incrível do pôr do sol',
     description: 'Capturada no melhor momento do dia',
     likes: 2345,
@@ -51,7 +51,7 @@ const mockImages = [
   {
     id: '2',
     type: 'image' as const,
-    thumbnail: '/images/profile-banner.jpg',
+    thumbnail: '/images/profile-banner-orange.jpg',
     title: 'Retrato minimalista',
     description: 'Explorando a beleza da simplicidade',
     likes: 4567,
@@ -61,7 +61,7 @@ const mockImages = [
   {
     id: '3',
     type: 'image' as const,
-    thumbnail: '/images/content-placeholder.jpg',
+    thumbnail: '/images/content-placeholder-orange.jpg',
     title: 'Paisagem urbana',
     description: 'A cidade nunca dorme, e nem eu',
     likes: 3210,
@@ -74,7 +74,7 @@ const mockPrivHub = [
   {
     id: '1',
     type: 'video' as const,
-    thumbnail: '/images/profile-banner.jpg',
+    thumbnail: '/images/profile-banner-orange.jpg',
     title: 'PrivHub Exclusive: Bastidores',
     description: 'Conteúdo exclusivo para membros PrivHub',
     likes: 8901,
@@ -84,7 +84,7 @@ const mockPrivHub = [
   {
     id: '2',
     type: 'image' as const,
-    thumbnail: '/images/hero-gradient.jpg',
+    thumbnail: '/images/hero-gradient-orange.jpg',
     title: 'Galeria Premium',
     description: 'Fotos em alta resolução exclusivas',
     likes: 6789,
@@ -193,8 +193,8 @@ export default function Home() {
         bio="Criador de conteúdo | Fotógrafo | Videógrafo. Compartilhando momentos especiais com você 📸"
         followers={15234}
         following={892}
-        profileImage="/images/content-placeholder.jpg"
-        bannerImage="/images/profile-banner.jpg"
+        profileImage="/images/content-placeholder-orange.jpg"
+        bannerImage="/images/profile-banner-orange.jpg"
       />
 
       {/* Tab Navigation */}

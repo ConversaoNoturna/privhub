@@ -43,74 +43,74 @@
 }
 
 :root {
-  --primary: #0066CC;
+  --primary: #FF6B35;
   --primary-foreground: #FFFFFF;
-  --sidebar-primary: #0066CC;
+  --sidebar-primary: #FF6B35;
   --sidebar-primary-foreground: #FFFFFF;
-  --chart-1: #0066CC;
-  --chart-2: #0052A3;
-  --chart-3: #003D7A;
-  --chart-4: #002851;
-  --chart-5: #001428;
-  --radius: 0.5rem;
-  --background: #FFFFFF;
-  --foreground: #1A1A1A;
-  --card: #FFFFFF;
-  --card-foreground: #1A1A1A;
-  --popover: #FFFFFF;
-  --popover-foreground: #1A1A1A;
-  --secondary: #F5F5F5;
-  --secondary-foreground: #4D4D4D;
-  --muted: #E8E8E8;
-  --muted-foreground: #999999;
-  --accent: #0066CC;
-  --accent-foreground: #FFFFFF;
-  --destructive: #DC2626;
-  --destructive-foreground: #FFFFFF;
-  --border: #E8E8E8;
-  --input: #F5F5F5;
-  --ring: #0066CC;
-  --sidebar: #FFFFFF;
-  --sidebar-foreground: #1A1A1A;
-  --sidebar-accent: #0066CC;
-  --sidebar-accent-foreground: #FFFFFF;
-  --sidebar-border: #E8E8E8;
-  --sidebar-ring: #0066CC;
-}
-
-.dark {
-  --primary: #0066CC;
-  --primary-foreground: #FFFFFF;
-  --sidebar-primary: #0066CC;
-  --sidebar-primary-foreground: #FFFFFF;
+  --chart-1: #FF6B35;
+  --chart-2: #FF5722;
+  --chart-3: #E64A19;
+  --chart-4: #D63E0F;
+  --chart-5: #C63205;
+  --radius: 0.75rem;
   --background: #0F0F0F;
-  --foreground: #E8E8E8;
+  --foreground: #FFFFFF;
   --card: #1A1A1A;
-  --card-foreground: #E8E8E8;
+  --card-foreground: #FFFFFF;
   --popover: #1A1A1A;
-  --popover-foreground: #E8E8E8;
+  --popover-foreground: #FFFFFF;
   --secondary: #2A2A2A;
-  --secondary-foreground: #B3B3B3;
+  --secondary-foreground: #E0E0E0;
   --muted: #333333;
   --muted-foreground: #999999;
-  --accent: #0066CC;
+  --accent: #FF6B35;
   --accent-foreground: #FFFFFF;
-  --destructive: #EF4444;
+  --destructive: #FF3B30;
   --destructive-foreground: #FFFFFF;
   --border: #333333;
   --input: #2A2A2A;
-  --ring: #0066CC;
-  --chart-1: #0066CC;
-  --chart-2: #0052A3;
-  --chart-3: #003D7A;
-  --chart-4: #002851;
-  --chart-5: #001428;
+  --ring: #FF6B35;
   --sidebar: #1A1A1A;
-  --sidebar-foreground: #E8E8E8;
-  --sidebar-accent: #0066CC;
+  --sidebar-foreground: #FFFFFF;
+  --sidebar-accent: #FF6B35;
   --sidebar-accent-foreground: #FFFFFF;
   --sidebar-border: #333333;
-  --sidebar-ring: #0066CC;
+  --sidebar-ring: #FF6B35;
+}
+
+.dark {
+  --primary: #FF6B35;
+  --primary-foreground: #FFFFFF;
+  --sidebar-primary: #FF6B35;
+  --sidebar-primary-foreground: #FFFFFF;
+  --background: #0F0F0F;
+  --foreground: #FFFFFF;
+  --card: #1A1A1A;
+  --card-foreground: #FFFFFF;
+  --popover: #1A1A1A;
+  --popover-foreground: #FFFFFF;
+  --secondary: #2A2A2A;
+  --secondary-foreground: #E0E0E0;
+  --muted: #333333;
+  --muted-foreground: #999999;
+  --accent: #FF6B35;
+  --accent-foreground: #FFFFFF;
+  --destructive: #FF3B30;
+  --destructive-foreground: #FFFFFF;
+  --border: #333333;
+  --input: #2A2A2A;
+  --ring: #FF6B35;
+  --chart-1: #FF6B35;
+  --chart-2: #FF5722;
+  --chart-3: #E64A19;
+  --chart-4: #D63E0F;
+  --chart-5: #C63205;
+  --sidebar: #1A1A1A;
+  --sidebar-foreground: #FFFFFF;
+  --sidebar-accent: #FF6B35;
+  --sidebar-accent-foreground: #FFFFFF;
+  --sidebar-border: #333333;
+  --sidebar-ring: #FF6B35;
 }
 
 @layer base {
@@ -186,7 +186,61 @@
   }
 }
 
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(255, 107, 53, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(255, 107, 53, 0.6);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
 @layer components {
+  /* Gradient Background */
+  .gradient-bg {
+    background: linear-gradient(135deg, #0F0F0F 0%, #1A1A1A 50%, #2A2A2A 100%);
+  }
+  
+  /* Glow Effect */
+  .glow-orange {
+    box-shadow: 0 0 20px rgba(255, 107, 53, 0.3);
+  }
+  
+  .glow-orange-lg {
+    box-shadow: 0 0 40px rgba(255, 107, 53, 0.4);
+  }
+  
+  /* Gradient Text */
+  .gradient-text {
+    background: linear-gradient(135deg, #FF6B35 0%, #FF8C5A 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  /* Hover Effects */
+  .hover-glow:hover {
+    box-shadow: 0 0 30px rgba(255, 107, 53, 0.5);
+    transform: translateY(-2px);
+  }
+  
   /**
    * Custom container utility that centers content and adds responsive padding.
    *
